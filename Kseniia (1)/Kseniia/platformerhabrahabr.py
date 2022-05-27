@@ -58,10 +58,10 @@ def gameWonAnimation(pg, screen, level):
         place = text.get_rect(center=(400, 220))
         sc.blit(text, place)
         text = font.render("Чтобы выйти нажмите на крестик", True, (0, 100, 0))
-        place = text.get_rect(center=(400, 320))
+        place = text.get_rect(center=(400, 300))
         sc.blit(text, place)
         bt1 = Button()
-        button1 = bt1.create_button(screen, Color(COLOR), 200, 400, 400, 90, 50, 'Первый уровень', Color(COLOR1))
+        button1 = bt1.create_button(screen, Color(COLOR), 200, 400, 400, 90, 50, 'Начать сначала', Color(COLOR1))
     pg.display.update()
 
     while 1:
@@ -75,7 +75,7 @@ def gameWonAnimation(pg, screen, level):
                         level2()
                     elif level == 'two':
                         level3()
-                    else:
+                elif  200 <= mouse_pos[0] <= 600 and 400 <= mouse_pos[1] <= 490:
                         level1()
 
 
@@ -298,12 +298,12 @@ def level3():
         "-                                -",
         "-                               *-",
         "-                                -",
+        "-                                -",
         "-                               --",
         "-                                -",
         "-              ---               -",
         "-                                -",
         "-                      --        -",
-        "-                                -",
         "-         --                     -",
         "-                    ---         -",
         "-                                -",
